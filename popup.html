@@ -1,5 +1,99 @@
+<!DOCTYPE html>
 <html>
-	<body>
-		<h1>Time is the only truly valuable commodity.</h1>
-	</body>
-<html>
+
+<head>
+	<title>Waspy Blocker</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			width: 300px;
+			padding: 10px;
+		}
+
+		h1 {
+			font-size: 1.2em;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 10px 0;
+			max-height: 150px;
+			overflow-y: auto;
+			border: 1px solid #ccc;
+			padding: 5px;
+		}
+
+		li {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 5px;
+			border-bottom: 1px solid #eee;
+		}
+
+		li:last-child {
+			border-bottom: none;
+		}
+
+		button {
+			cursor: pointer;
+			padding: 5px 10px;
+		}
+
+		.remove-btn {
+			background-color: #fdd;
+			border: 1px solid #f00;
+			color: #f00;
+			font-size: 0.8em;
+		}
+
+		.add-section {
+			display: flex;
+			margin-top: 15px;
+		}
+
+		.add-section input {
+			flex-grow: 1;
+			margin-right: 5px;
+			padding: 5px;
+		}
+
+		#status {
+			margin-top: 10px;
+			text-align: center;
+			font-weight: bold;
+			color: green;
+		}
+
+		#breakBtn {
+			width: 100%;
+			margin-bottom: 10px;
+			background-color: #e0f0ff;
+			border: 1px solid #add8e6;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Waspy Blocker</h1>
+
+	<button id="breakBtn">Take a 30min Break</button>
+	<div id="status"></div>
+
+	<h2>Blocked Sites:</h2>
+	<ul id="blockedSitesList">
+		<!-- Sites will be listed here by JS -->
+	</ul>
+
+	<div class="add-section">
+		<input type="text" id="newSite" placeholder="e.g., *.example.com">
+		<button id="addSiteBtn">Add</button>
+	</div>
+
+	<script src="popup.js"></script>
+</body>
+
+</html>
